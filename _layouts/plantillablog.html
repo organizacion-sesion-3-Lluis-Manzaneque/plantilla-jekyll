@@ -1,0 +1,22 @@
+---
+layout: layout
+---
+
+{{content}}
+<ul>
+{% for page in site.posts %}
+
+
+  <li>
+    <a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a>
+    <ul>
+      <li>
+        <p>Fecha de publicacion: {{page.date}}</p>
+      </li>
+      <li>
+        <p>Extracte del text: {{page.excerpt}}</p>
+      </li>
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
